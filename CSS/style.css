@@ -6,7 +6,15 @@
 
 h1{
     font-family: roboto serif;
+    font-size: 64px;
+    font-weight: 500;
 }
+
+h2 {
+    font-family: roboto serif;
+    font-size: 40px;
+}
+
 
 body{
     display: flex;
@@ -27,13 +35,12 @@ a{
 }
 
 .main-container{
-    width: 100%;
+    width: 100vw;
     height: 100vh;
+    padding: 0 50px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 60px 5fr 6fr 60px;
-    min-height: 100vh;
-    min-width: 100vw;
     grid-template-areas: 
     "header header header"
     "banner banner banner"
@@ -66,42 +73,74 @@ header .nav-btns a{
 
 main{
     grid-column: 1 / -1;
+
 }
+/* ------------- BANNER --------------- */
 
 .banner{
     background-color: palegoldenrod;
     grid-area: banner;
     grid-column: 1 / -1;
-    display: flex;
-    justify-content: space-between;
-    border: solid purple 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+    "slogan img";
 }
 
 .slogan{
+    grid-area: slogan;
     display: flex;
-    justify-content: space-evenly;
     flex-direction: column;
-    width: 60%;
+    justify-content: center;
+    padding: 17% 17%;
     background-color: aquamarine;
-    border: darkblue dotted;
+}
+
+.slogan h1{
+    width: 70%;
+}
+
+.slogan p{
+padding-top: 5%;
+width: 70%;
+font-size: 24px;
+font-family: Roboto;
 }
 
 .img-cont {
+    grid-area: img;
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
+.img-cont img{
+    width: 600px;
+    height: auto;
+}
+
+/* ------------- BANNER------------ */
 
 .card-container{
     background-color: lavender;
     grid-area: card-container;
     grid-column: 1 / -1;
     grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    column-gap: 10px;
+    row-gap: 20px;
+}
+
+.card-container .explore{
+    background-color: #FEBD2F;
 }
 
 .card-container .card{
-    background-color: none;
+    background-color: pink;
     border-radius: 15px;
+
 }
 /* ----------------- MAIN CONTAINTER --------------*/ 
 /* ---------------- FOOTER --------------------- */
