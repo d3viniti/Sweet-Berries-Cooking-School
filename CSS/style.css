@@ -1,3 +1,12 @@
+:root{
+    background-color: #F5F3EF;
+    --card: #FFFFFF;
+    --accent: #FEBD2F;
+    --text-primary: #000000;
+    --text-secondary: #646464;
+    --outline: #DCDCDC;
+  }
+
 * {
     box-sizing: border-box;
     padding: 0;
@@ -20,6 +29,8 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    /* margin: 0 5%;
+    margin/padding also not working in here*/
 }
 
 button{
@@ -35,9 +46,8 @@ a{
 }
 
 .main-container{
-    width: 100vw;
+    /* width: 100vw; */
     height: 100vh;
-    padding: 0 50px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 60px 5fr 6fr 60px;
@@ -46,9 +56,9 @@ a{
     "banner banner banner"
     "card-container card-container card-container"
     "footer footer footer";
-    background-color: skyblue;
-   /* what does this do?
-   grid-auto-columns: minmax (1fr,auto); */
+    background-color: var(--background-color);
+    /*why isn't the margin working for the entire page here?
+    */
 }
 
 /* ----------------- HEADER ------------------- */
@@ -60,8 +70,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 25px;
-    background-color: pink;
+    padding: 20px 0;
 }
 
 header .nav-btns a{
@@ -73,12 +82,11 @@ header .nav-btns a{
 
 main{
     grid-column: 1 / -1;
-
+    display: grid;
 }
 /* ------------- BANNER --------------- */
 
 .banner{
-    background-color: palegoldenrod;
     grid-area: banner;
     grid-column: 1 / -1;
     display: grid;
@@ -92,16 +100,16 @@ main{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 17% 17%;
-    background-color: aquamarine;
+    padding: 0 17%;
 }
 
 .slogan h1{
     width: 70%;
+    border: dotted pink;
 }
 
 .slogan p{
-padding-top: 5%;
+/* padding-top: 5%; */
 width: 70%;
 font-size: 24px;
 font-family: Roboto;
@@ -112,40 +120,66 @@ font-family: Roboto;
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 30px 0;
 }
 
 .img-cont img{
-    width: 600px;
+    width: 500px;
     height: auto;
 }
 
 /* ------------- BANNER------------ */
 
 .card-container{
-    background-color: lavender;
     grid-area: card-container;
     grid-column: 1 / -1;
-    grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
-    display: grid;
+    display: grid;  
+    justify-content: center;
+    width: 100%;
+    /* how do I get this to center with the width?*/
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: auto;
+    grid-auto-rows: minmax(200px, auto);
+    grid-row-start: 3;
+    grid-row-end: 5;
     column-gap: 10px;
-    row-gap: 20px;
+    row-gap: 10px;
+    /* padding: 2.5% 5%; */
+/* WHY WON'T THIS CENTER????????
+
+Or take up the entire height of the column as I have it set?*/
+}
+
+
+.card-container .card{
+    background-color: var(--card);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    position: relative;
 }
 
 .card-container .explore{
     background-color: #FEBD2F;
 }
 
-.card-container .card{
-    background-color: pink;
-    border-radius: 15px;
+.card-container button{
+    align-self: flex-start;
+}
 
+.card-container img{
+    position: absolute;
+    top: 0;
+    right: 15px;
 }
 /* ----------------- MAIN CONTAINTER --------------*/ 
 /* ---------------- FOOTER --------------------- */
 footer{
-    background-color: rosybrown;
+    background-color: var(--accent);
     grid-area: footer;
     grid-column: 1 / -1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
