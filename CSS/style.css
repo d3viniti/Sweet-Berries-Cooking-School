@@ -46,11 +46,9 @@ a{
 }
 
 .main-container{
-    /* width: 100vw; */
-    height: 100vh;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 60px 5fr 6fr 60px;
+    grid-template-rows: 60px 1fr 1fr 60px;
     grid-template-areas: 
     "header header header"
     "banner banner banner"
@@ -71,6 +69,8 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 20px 0;
+    width: 80%;
+    margin: 0 auto;
 }
 
 header .nav-btns a{
@@ -82,17 +82,21 @@ header .nav-btns a{
 
 main{
     grid-column: 1 / -1;
-    display: grid;
+    grid-row: span 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
 }
 /* ------------- BANNER --------------- */
 
 .banner{
     grid-area: banner;
     grid-column: 1 / -1;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-areas: 
-    "slogan img";
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin: 0 auto;
+    /* padding-top: 20px; not doing anything */
 }
 
 .slogan{
@@ -100,7 +104,9 @@ main{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 0 17%;
+    align-items: center;
+    width: 60%;
+    flex-basis: max-height: content;
 }
 
 .slogan h1{
@@ -116,16 +122,16 @@ font-family: Roboto;
 }
 
 .img-cont {
-    grid-area: img;
     display: flex;
     justify-content: center;
-    align-items: center;
     padding: 30px 0;
+    margin: 0 auto;
+    flex-basis: auto;
+    align-items: center;
 }
 
 .img-cont img{
-    width: 500px;
-    height: auto;
+    width: 80%;
 }
 
 /* ------------- BANNER------------ */
@@ -134,21 +140,17 @@ font-family: Roboto;
     grid-area: card-container;
     grid-column: 1 / -1;
     display: grid;  
-    justify-content: center;
-    width: 100%;
-    /* how do I get this to center with the width?*/
+    width: 80%;
+    margin: 60px auto; /* this property centers the content between horizontally*/
     grid-template-columns: 1fr 1fr 1fr;
     grid-auto-rows: minmax(200px, auto);
     grid-row-start: 3;
     grid-row-end: 5;
     column-gap: 10px;
-    row-gap: 10px;
-    /* padding: 2.5% 5%; */
-/* WHY WON'T THIS CENTER????????
-
-Or take up the entire height of the column as I have it set?*/
-}
-
+    row-gap: 30px;
+    }
+/*I want to create padding or margin below or above the card container, but it makes it so the 
+site has to scroll. Would I be able to achieve this if I made the cards inside the container smaller?*/
 
 .card-container .card{
     background-color: var(--card);
@@ -157,6 +159,9 @@ Or take up the entire height of the column as I have it set?*/
     flex-direction: column;
     justify-content: space-evenly;
     position: relative;
+    width: 80%;
+    padding: 0 30px;
+    justify-self: center;
 }
 
 .card-container .explore{
@@ -169,7 +174,7 @@ Or take up the entire height of the column as I have it set?*/
 
 .card-container img{
     position: absolute;
-    top: 0;
+    top: -20px;
     right: 15px;
 }
 /* ----------------- MAIN CONTAINTER --------------*/ 
@@ -183,3 +188,12 @@ footer{
     justify-content: center;
     align-items: center;
 }
+
+/* Today's goals:
+  - create upper/lower margins/borders for my card container without making
+  the page have to scroll
+  -review flex/grid properties for changing how elements behave when VP gets
+  larger/smaller
+  -what are general media querie VP sizes for phone and tablet?
+
+  768pxtablet 481 mobile
