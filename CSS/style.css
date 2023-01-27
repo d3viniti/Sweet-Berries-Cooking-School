@@ -76,7 +76,12 @@ header {
 header .nav-btns a{
     padding: 0 15px;
 }
-
+.action-btn button{
+    background-color: var(--text-primary);
+    color: var(--card);
+    padding: 5px 15px;
+    font-family: roboto;
+}
 /* ----------------- HEADER ------------------- */
 /* ----------------- MAIN CONTAINTER --------------*/ 
 
@@ -106,7 +111,7 @@ main{
     justify-content: center;
     align-items: center;
     width: 60%;
-    flex-basis: max-height: content;
+
 }
 
 .slogan h1{
@@ -170,6 +175,8 @@ site has to scroll. Would I be able to achieve this if I made the cards inside t
 
 .card-container button{
     align-self: flex-start;
+    background-color: var(--card);
+    border: var(--outline) 1px solid;
 }
 
 .card-container img{
