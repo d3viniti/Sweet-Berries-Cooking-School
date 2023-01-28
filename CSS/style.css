@@ -17,11 +17,13 @@ h1{
     font-family: roboto serif;
     font-size: 64px;
     font-weight: 500;
+    flex-shrink: 1;
 }
 
 h2 {
     font-family: roboto serif;
-    font-size: 40px;
+    font-size: 30px;
+    flex-shrink: 1;
 }
 
 
@@ -203,3 +205,41 @@ footer{
   -what are general media querie VP sizes for phone and tablet?
 
   768pxtablet 481 mobile
+
+  */
+
+  @media screen and (max-width: 1410px){
+
+    h1 {
+        font-size: 50px;
+
+    }
+
+    .slogan p {
+        font-size: 20px;
+        padding-top: 10px;
+    }
+
+    .card-container img{
+        position: absolute;
+        top: -20px;
+        right: 0px;
+    }
+  }
+
+  /* absolute image is overlapping on top of the card text - 
+  how do I make the image smaller at the max-width1280 query?
+  
+  Orrrr i may just put the tablet styling at this width...*/
+
+@media screen and (max-width: 1280px){
+    .card-container img{
+        max-width: 60%;
+    }
+}
+
+  @media screen and (max-width: 1170px){
+    h1 {
+        font-size: 40px;
+    }
+  }
