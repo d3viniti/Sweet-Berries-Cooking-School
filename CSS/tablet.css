@@ -46,7 +46,7 @@
      /*how do I make absolute positioned imgs smaller 
      in media query? */
      .card-container img{
-         max-width: 60%;
+         max-width: 25%;
      }
  
  }
