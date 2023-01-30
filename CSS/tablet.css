@@ -7,8 +7,11 @@
      header {
      width: 85%;
      }
- 
-     /* How do I get the logo to be centered?*/
+     
+     .nav-btns a{
+        padding: 0;
+     }
+    
  
     .banner {
      flex-direction: column;
@@ -49,10 +52,4 @@
          max-width: 25%;
      }
  
- }
- 
- /* below is mobile media query*/
-
- @media screen and (max-width: 600px) {
-    
  }
