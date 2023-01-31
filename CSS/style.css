@@ -89,6 +89,10 @@ header .nav-btns{
     padding: 5px 15px;
     font-family: roboto;
 }
+
+.hamburger {
+    display: none;
+}
 /* ----------------- HEADER ------------------- */
 /* ----------------- MAIN CONTAINTER --------------*/ 
 

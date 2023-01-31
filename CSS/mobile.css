@@ -6,15 +6,69 @@
 
  @media screen and (max-width: 500px){
     .nav-btns a{
-        display: none;
+        /* display: none; */
+        position: fixed;
+        left: -100%;
     }
 
     .action-btn {
-        display: none;
+        /* display: none; */
+        position: fixed;
+        left: -100%;
+    }
+
+    .nav-btns a .active{
+        left: 0;
+    }
+
+    .action-btns .active{
+        left: 0;
     }
 
     .title{
-        margin: 0 auto;
+        /* margin: 0 auto; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
         background-color: pink;
+        margin: 0 auto;
+    }
+
+    header{
+        justify-content: center;
+        background-color: lavender;
+    }
+
+    .hamburger{
+    display: block;
+    }
+    
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+}
+
+    .card-container{
+        display: flex;
+        flex-direction: column;
+        margin: 30px auto;
+    }
+
+    .card-container .card{
+        height: 200px;
+    }
+
+    .card-container .explore{
+        justify-content: center;
+        height: 150px;
     }
  }
