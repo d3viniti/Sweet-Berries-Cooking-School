@@ -1,11 +1,16 @@
 @media screen and (max-width: 650px) {
     header .nav-btns{
         width: 120px;
-        display: none;
+        display: flex;
     }
  }
 
  @media screen and (max-width: 500px){
+    
+    header .nav-btns{
+        display: none;
+    }
+    
     .nav-btns a{
         /* display: none; */
         position: fixed;
