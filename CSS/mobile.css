@@ -8,29 +8,32 @@
  @media screen and (max-width: 500px){
     
     header .nav-btns{
-        display: none;
-    }
-    
-    .nav-btns a{
         /* display: none; */
+        flex-direction: column;
+        transform: translateY(60px);
+        width:100%;
+        gap:20px;
+    text-align: center;
+    background-color: white;
+    padding-bottom: 20px;
+        justify-content: space-around;
         position: fixed;
         left: -100%;
+        transition: 0.3s;
     }
 
     .action-btn {
         /* display: none; */
+        visibility: collapse;
         position: fixed;
         left: -100%;
     }
 
-    .nav-btns a .active{
+    .nav-btns.active{
         left: 0;
     }
 
-    .action-btns .active{
-        left: 0;
-    }
-
+    
     .title{
         /* margin: 0 auto; */
         display: flex;
@@ -38,6 +41,10 @@
         align-items: center;
         background-color: pink;
         margin: 0 auto;
+    }
+
+    .hamburger{
+        visibility: visible;
     }
 
     header{
