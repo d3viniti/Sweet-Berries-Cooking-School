@@ -8,22 +8,24 @@
  @media screen and (max-width: 500px){
     
     header .nav-btns{
-        /* display: none; */
         flex-direction: column;
         transform: translateY(60px);
         width:100%;
-        gap:20px;
-    text-align: center;
-    background-color: white;
-    padding-bottom: 20px;
+        gap: 20px;
+        text-align: center;
+        background-image: linear-gradient(var(--accent), var(--card));
+        border-radius: 20px;
+        margin-top: 30px;
+        padding-top: 15px;
+        padding-bottom: 40px;
         justify-content: space-around;
         position: fixed;
         left: -100%;
         transition: 0.3s;
     }
 
+
     .action-btn {
-        /* display: none; */
         visibility: collapse;
         position: fixed;
         left: -100%;
@@ -35,46 +37,26 @@
 
     
     .title{
-        /* margin: 0 auto; */
         display: flex;
         justify-content: center;
         align-items: center;
-        background-color: pink;
         margin: 0 auto;
     }
 
     .hamburger{
+        display: inline;
         visibility: visible;
     }
 
     header{
         justify-content: center;
-        background-color: lavender;
     }
 
-    /* 
-    
-    trying out the hamburger menu from devCommunity article
-
-    .hamburger{
-    display: block;
-    }
-
-    .hamburger.active .bar:nth-child(2) {
-        opacity: 0;
-    }
-
-    .hamburger.active .bar:nth-child(1) {
-        transform: translateY(8px) rotate(45deg);
-    }
-
-    .hamburger.active .bar:nth-child(3) {
-        transform: translateY(-8px) rotate(-45deg);
-    } */
 
     .card-container{
         display: flex;
         flex-direction: column;
+        align-items: center;
         margin: 30px auto;
     }
 

@@ -31,8 +31,6 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    /* margin: 0 5%;
-    margin/padding also not working in here*/
 }
 
 button{
@@ -91,7 +89,8 @@ header .nav-btns{
 }
 
 .hamburger {
-    visibility: collapse;
+    /* visibility: collapse; */
+    display: none;
 }
 
 /* ----------------- HEADER ------------------- */
