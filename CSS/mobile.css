@@ -6,7 +6,7 @@
  }
 
  @media screen and (max-width: 500px){
-    
+    /* Seems like you did a lot of progress for building a functional hamburger menu but on mobile device sizes I don't see the hamburger icon. Needs a bit improvement. Should be easy to fix! */
     header .nav-btns{
         flex-direction: column;
         transform: translateY(60px);
